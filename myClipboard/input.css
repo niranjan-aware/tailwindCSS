@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+@layer base{
+    h3{
+    /* this will be added directly to h3 */
+        /* @apply text-left */
+    }
+}
+.section-container{
+    /* here we can add repeating styles and then need to add only class name ==
+    like this
+*/
+    /* @apply text-left text-strongCyan */ 
+}
+
+body{
+    background-image: url('../images/bg-header-desktop.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+}
+
+@media(max-width: 576px){
+    body{
+        background-image: url('../images/bg-header-mobile.png');
+        background-repeat:no-repeat;
+        background-size:contain;
+    }
+}
