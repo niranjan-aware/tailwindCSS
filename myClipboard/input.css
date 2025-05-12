@@ -1,30 +1,42 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
 
-@layer base{
-    h3{
-    /* this will be added directly to h3 */
-        /* @apply text-left */
-    }
-}
-.section-container{
-    /* here we can add repeating styles and then need to add only class name ==
-    like this
-*/
-    /* @apply text-left text-strongCyan */ 
+@layer base {
+  h3 {
+    @apply mb-8 text-4xl font-bold text-darkGrayishBlue md:text-5xl;
+  }
+
+  h5 {
+    @apply mb-2 text-2xl font-bold text-darkGrayishBlue;
+  }
 }
 
-body{
-    background-image: url('../images/bg-header-desktop.png');
-    background-repeat:no-repeat;
-    background-size:contain;
+.section-container {
+  @apply max-w-6xl mx-auto text-center px-10;
 }
 
-@media(max-width: 576px){
-    body{
-        background-image: url('../images/bg-header-mobile.png');
-        background-repeat:no-repeat;
-        background-size:contain;
-    }
+.section-content {
+  @apply max-w-3xl mx-auto leading-9 text-center text-grayishBlue;
+}
+
+.button-container {
+  @apply flex flex-col justify-center w-full space-y-6 text-xl text-white md:flex-row md:space-y-0 md:space-x-4;
+}
+
+body {
+  background-image: url('../images/bg-header-desktop.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 576px) {
+  body {
+    background-image: url('../images/bg-header-mobile.png');
+  }
+}
+
+.ficon:hover {
+  filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg)
+    brightness(101%) contrast(94%);
 }
